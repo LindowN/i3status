@@ -2,7 +2,7 @@ import os
 
 def check_ping():
 
-    hostname = "google.com"
+    hostname = "8.8.8.8"
     response = os.system("ping -t 1" + hostname)
 
     if response == 0:
@@ -14,3 +14,4 @@ def check_ping():
 
 ping = check_ping()
 print(ping)
+
