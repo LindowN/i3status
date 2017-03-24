@@ -1,5 +1,5 @@
 #i3status
-IP des interfaces réseau // à faire
+IP des interfaces réseau // à faire \n
 SSID connecté, protocole, BSSID de la borne // à faire
 IP, Ping avg, % de loss de la route par défaut // à faire
 IP, Ping avg, % de loss du NS // à faire
