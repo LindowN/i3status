@@ -1,0 +1,13 @@
+SSID 1: Ionis Portal
+SSID 2: IONIS
+SSID 3: IONIS361
+SSID 4: Freebox-1E802F
+SSID 5: 
+SSID 6: Bbox-AA5185
+SSID 7: Solenne
+SSID 8: SFR_4A80
+SSID 9: SFR WiFi FON
+SSID 10: SFR WiFi Mobile
+SSID 11: Fredwifi
+SSID 12: FreeWifi
+
