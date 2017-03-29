@@ -1,4 +1,4 @@
-from tkinter import * 
+from tkinter import *
 
 fenetre = Tk()
 fenetre.resizable(width=False, height=False)
