@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import font
 import time
 import psutil
 
@@ -29,6 +30,10 @@ fenetre = Tk()
 fenetre.title("i3Status")
 # helv36 = tkFont.Font(family = "Helvetica",size = 36,weight = "bold") import tkFont
 
+tahoma = font.Font(family='Obytron', size=12, weight='bold')
+cancer = font.Font(family='Purisa', size=12, weight='bold')
+font.families()
+
 fenetre.resizable(width=False, height=False)
 canvas = Canvas(fenetre, width=1200, height=600, background="#5A5E6B", cursor="pirate")
 canvas.pack()
@@ -39,12 +44,12 @@ Text1 = canvas.create_text(165, 140, text="SOMETHING")
 
 white_line2 = canvas.create_line(1000, 150, 1200, 150, fill="white")
 white_line2_2 = canvas.create_line(1000, 150, 1000, 170, fill="white")
-Text2_title = canvas.create_text(1055, 140, text='Date and Time', font=("Purisa", 12))
+Text2_title = canvas.create_text(1055, 140, text='Date and Time', font=tahoma)
 Text2 = canvas.create_text(1083, 165, text=giveMeTime())
 
 white_line3 = canvas.create_line(950, 300, 1200, 300, fill="white")
 white_line3_2 = canvas.create_line(950, 300, 950, 320, fill="white")
-Text3 = canvas.create_text(985, 290, text=giveMeBattery())
+Text3 = canvas.create_text(985, 290, text=giveMeBattery(), font=cancer)
 
 white_line4 = canvas.create_line(900, 450, 1200, 450, activefill="red", fill="white")
 white_line4_2 = canvas.create_line(900, 450, 900, 470, fill="white")

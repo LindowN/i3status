@@ -12,4 +12,4 @@ volume.GetVolumeRange()
 getTheFuckinVolum = volume.GetMasterVolumeLevelScalar()
 getTheFuckinVolum = getTheFuckinVolum * 100
 print(math.floor(getTheFuckinVolum))
-volume.SetMasterVolumeLevel(-20.0, None)
+#volume.SetMasterVolumeLevel(-20.0, None)
