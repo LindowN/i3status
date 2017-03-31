@@ -1,20 +1,16 @@
-SSID 1: iPhone de CheikhOmar
-SSID 2: U can't see me but I can hear U!
-SSID 3: freebox_QOWTHH
-SSID 4: Ionis Portal
-SSID 5: IONIS361
-SSID 6: 
-SSID 7: FreeWifi
-SSID 8: orange
-SSID 9: Bbox-8B400A
-SSID 10: FreeWifi_secure
-SSID 11: Agat_Web
-SSID 12: Agat_Wifi
-SSID 13: freebox_WFQTTF
-SSID 14: 
-SSID 15: gladysfree
-SSID 16: MelissaErd
-SSID 17: Solenne
-SSID 18: meltygroup
-SSID 19: AndroidHotspot3801
+SSID 1: Ionis Portal
+SSID 2: Agat_Web
+SSID 3: IONIS
+SSID 4: IONIS361
+SSID 5: Solenne
+SSID 6: iPhone de CheikhOmar
+SSID 7: meltygroup
+SSID 8: U can't see me but I can hear U!
+SSID 9: Freebox-498B0A
+SSID 10: FreeWifi
+SSID 11: No Free Wifi for You
+SSID 12: 
+SSID 13: Bbox-A7B20A27
+SSID 14: MelissaErd
+SSID 15: 
 
