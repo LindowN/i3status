@@ -1,7 +1,7 @@
 import subprocess
 results = subprocess.check_output(["netsh", "wlan", "show", "network"])
 
-results = results.decode("ascii", "ignore") # needed in python 3
+results = results.decode("ascii", "ignore") 
 results = results.replace("\r","")
 ls = results.split("\n")
 ls = ls[4:]

@@ -24,7 +24,7 @@
 
 import os.path
 
-strPath = r"/home"
+strPath = r"C:/"
 
 if os.path.exists(strPath):
     print ("True")

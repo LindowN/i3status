@@ -1,13 +1,12 @@
 SSID 1: Ionis Portal
-SSID 2: IONIS
-SSID 3: IONIS361
-SSID 4: Freebox-1E802F
-SSID 5: 
-SSID 6: Bbox-AA5185
-SSID 7: Solenne
-SSID 8: SFR_4A80
-SSID 9: SFR WiFi FON
-SSID 10: SFR WiFi Mobile
-SSID 11: Fredwifi
-SSID 12: FreeWifi
+SSID 2: IONIS361
+SSID 3: Agat_Web
+SSID 4: IONIS
+SSID 5: No Free Wifi for You
+SSID 6: iPhone de CheikhOmar
+SSID 7: meltygroup
+SSID 8: Agat_Wifi
+SSID 9: 
+SSID 10: FreeWifi
+SSID 11: freebox_WFQTTF
 
