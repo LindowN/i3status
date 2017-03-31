@@ -1,0 +1,8 @@
+psutil
+socket
+sounddevice
+numpy
+wmi
+pycaw
+subprocess
+//python -m pip -r requirements.txt
