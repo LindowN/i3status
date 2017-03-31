@@ -14,7 +14,7 @@ def giveMeBattery():
 
 def giveMePercentBattery():
     battery = psutil.sensors_battery()
-    return battery.percent*1.6
+    return battery.percent
 
 def giveMeTime():
     return time.strftime("%A %d %B %Y %H:%M:%S")
@@ -27,17 +27,19 @@ def maj():
     canvas.delete(Text3)
     canvas.delete(Text2)
     canvas.delete(Rect2)
-    Text2 = canvas.create_text(1085, 165, text=giveMeTime())
-    Text3 = canvas.create_text(1045, 315, text=giveMeBattery())
-    random = 1035 + giveMePercentBattery()
+    Text2 = canvas.create_text(1055, 165, text=giveMeTime(), font=orbiclean)
+    Text3 = canvas.create_text(1055, 315, text=giveMeBattery(), font=orbiclean)
+    random = 1035 + giveMePercentBattery()*1.6
     Rect2 = canvas.create_rectangle(1035, 10, random, 35, fill="#FD3F92") 
+    Percent = canvas.create_text(1130, 25, text=str(giveMePercentBattery())+'%', font=orbiclean, fill='white')
     fenetre.after(1000,maj)
 
 fenetre = Tk()
 fenetre.title("i3Status")
 # helv36 = tkFont.Font(family = "Helvetica",size = 36,weight = "bold") import tkFont
 
-tahoma = font.Font(family='Obytron', size=12, weight='bold')
+FatBigHyppo = font.Font(family='Orbitron', size=12, weight='bold')
+orbiclean = font.Font(family='Orbitron', size=8)
 font.families()
 
 fenetre.resizable(width=False, height=False)
@@ -48,22 +50,23 @@ white_line1 = canvas.create_line(0, 150, 200, 150, fill="white")
 white_line1_2 = canvas.create_line(200, 150, 200, 170, fill="white")
 Text1 = canvas.create_text(165, 140, text="SOMETHING")
 
-white_line2 = canvas.create_line(1000, 150, 1200, 150, fill="white")
-white_line2_2 = canvas.create_line(1000, 150, 1000, 170, fill="white")
-Text2_title = canvas.create_text(1055, 140, text='Date and Time', font=tahoma)
-Text2 = canvas.create_text(1085, 165, text=giveMeTime())
+white_line2 = canvas.create_line(950, 150, 1200, 150, fill="white")
+white_line2_2 = canvas.create_line(950, 150, 950, 170, fill="white")
+Text2_title = canvas.create_text(1020, 140, text='Date and Time', font=FatBigHyppo)
+Text2 = canvas.create_text(985, 165, text=giveMeTime(), font=orbiclean)
 
 white_line3 = canvas.create_line(950, 300, 1200, 300, fill="white")
 white_line3_2 = canvas.create_line(950, 300, 950, 320, fill="white")
-Text3_title = canvas.create_text(980, 290, text='Battery', font=tahoma)
-Text3 = canvas.create_text(1045, 315, text=giveMeBattery())
+Text3_title = canvas.create_text(985, 290, text='Battery', font=FatBigHyppo)
+Text3 = canvas.create_text(985, 315, text=giveMeBattery(), font=orbiclean)
 Rect1 = canvas.create_rectangle(1035, 10, 1195, 35, fill="black")
-random = 1035 + giveMePercentBattery()
+random = 1035 + giveMePercentBattery()*1.6
 Rect2 = canvas.create_rectangle(1035, 10, random, 35, fill="#FD3F92")
+Percent = canvas.create_text(1130, 25, text=str(giveMePercentBattery())+'%', font=orbiclean, fill='white')
 
-white_line4 = canvas.create_line(900, 450, 1200, 450, activefill="red", fill="white")
-white_line4_2 = canvas.create_line(900, 450, 900, 470, fill="white")
-Text4 = canvas.create_text(935, 440, activefill="red", text="SOMETHING")
+white_line4 = canvas.create_line(950, 450, 1200, 450, fill="white")
+white_line4_2 = canvas.create_line(950, 450, 950, 470, fill="white")
+Text4 = canvas.create_text(985, 440, activefill="red", text="SOMETHING")
 
 white_line5 = canvas.create_line(0, 300, 250, 300, fill="white")
 white_line5_2 = canvas.create_line(250, 300, 250, 320, fill="white")
