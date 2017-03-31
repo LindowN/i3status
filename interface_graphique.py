@@ -2,6 +2,11 @@ from tkinter import *
 from tkinter import font
 import time
 import psutil
+import math
+
+def giveMeRemainingSpace():
+    mybytes = psutil.disk_usage('/').free / 1000000000
+    return 'Free space on disk:', math.floor(mybytes), 'Go'
 
 def secs2hours(secs):
     mm, ss = divmod(secs, 60)
@@ -31,7 +36,7 @@ def maj():
     Text3 = canvas.create_text(1055, 315, text=giveMeBattery(), font=orbiclean)
     random = 1035 + giveMePercentBattery()*1.6
     Rect2 = canvas.create_rectangle(1035, 10, random, 35, fill="#FD3F92") 
-    Percent = canvas.create_text(1130, 25, text=str(giveMePercentBattery())+'%', font=orbiclean, fill='white')
+    Percent = canvas.create_text(1110, 20, text=str(giveMePercentBattery())+'%', font=orbiclean, fill='white')
     fenetre.after(1000,maj)
 
 fenetre = Tk()
@@ -43,7 +48,7 @@ orbiclean = font.Font(family='Orbitron', size=8)
 font.families()
 
 fenetre.resizable(width=False, height=False)
-canvas = Canvas(fenetre, width=1200, height=600, background="#5A5E6B", cursor="pirate")
+canvas = Canvas(fenetre, width=1200, height=600, background="#5A5E6B", cursor="arrow")
 canvas.pack()
 
 white_line1 = canvas.create_line(0, 150, 200, 150, fill="white")
@@ -62,11 +67,12 @@ Text3 = canvas.create_text(985, 315, text=giveMeBattery(), font=orbiclean)
 Rect1 = canvas.create_rectangle(1035, 10, 1195, 35, fill="black")
 random = 1035 + giveMePercentBattery()*1.6
 Rect2 = canvas.create_rectangle(1035, 10, random, 35, fill="#FD3F92")
-Percent = canvas.create_text(1130, 25, text=str(giveMePercentBattery())+'%', font=orbiclean, fill='white')
+Percent = canvas.create_text(1100, 20, text=str(giveMePercentBattery())+'%', font=orbiclean, fill='white')
 
 white_line4 = canvas.create_line(950, 450, 1200, 450, fill="white")
 white_line4_2 = canvas.create_line(950, 450, 950, 470, fill="white")
-Text4 = canvas.create_text(985, 440, activefill="red", text="SOMETHING")
+Text4_Title = canvas.create_text(975, 440, text="Disk", font=FatBigHyppo)
+Text4 = canvas.create_text(1040, 465, text=giveMeRemainingSpace(), font=orbiclean)
 
 white_line5 = canvas.create_line(0, 300, 250, 300, fill="white")
 white_line5_2 = canvas.create_line(250, 300, 250, 320, fill="white")
@@ -84,7 +90,7 @@ Text6 = canvas.create_text(265, 440, text="SOMETHING")
 maj()
 fenetre.mainloop()
 
-
+calendar()
 # changer la taille = font=("Purisa", 12)
 # effet hober = activefill="red"
 # changer curseur = cursor="pirate"
