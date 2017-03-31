@@ -1,10 +1,11 @@
-import os
+import psutil,os
 
-print(os.getloadavg())
-
-toto = os.times().user
-#(1.296875, 0.765625, 0.0, 0.0, 0.0)
-print(toto)
-#times() -> (utime, stime, cutime, cstime, elapsed_time)
-
-#Return a tuple of floating point numbers indicating process times.
+'''cpu_times = psutil.cpu_times()
+print(cpu_times)
+cpu_percent = psutil.cpu_percent()
+print(cpu_percent)'''
+p = psutil.Process()
+p_cpu_times = p.cpu_times()
+print(p_cpu_times)
+cpu_percent = p.cpu_percent(1)
+print(cpu_percent)
