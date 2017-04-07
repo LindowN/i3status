@@ -18,3 +18,7 @@
 - [x] Nommer les bornes Wi-Fi dans un fichier de conf // à faire--(fait)
 
 
+- [ ] BuildBot
+- [ ] Read the Docs
+- [ ] Setup.py
+- [x] Licence

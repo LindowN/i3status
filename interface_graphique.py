@@ -90,7 +90,6 @@ Text6 = canvas.create_text(265, 440, text="SOMETHING")
 maj()
 fenetre.mainloop()
 
-calendar()
 # changer la taille = font=("Purisa", 12)
 # effet hober = activefill="red"
 # changer curseur = cursor="pirate"
