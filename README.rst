@@ -2,7 +2,7 @@
 
 - [ ] SSID connecté, protocole, BSSID de la borne // à faire
 - [ ] IP, Ping avg, % de loss de la route par défaut // à faire
-- [ ] IP, Ping avg, % de loss du NS // à faire
+- [x] IP, Ping avg, % de loss du NS // à faire
 - [ ] Run-watch (Vérifier si un client DHCP est lancé, un watcher gulp, in seveur web de dev, ...). // à faire
 - [ ] Interface Tkinter (S'inspirer de Conky) // à faire
 - [x] --heure--(fait)
