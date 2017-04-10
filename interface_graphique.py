@@ -1,12 +1,33 @@
+import time
+import math
+import psutil
+import subprocess
 from tkinter import *
 from tkinter import font
-import time
-import psutil
-import math
+from comtypes import CLSCTX_ALL
+from ctypes import cast, POINTER
+from pycaw import AudioUtilities, IAudioEndpointVolume
 
 def giveMeRemainingSpace():
     mybytes = psutil.disk_usage('/').free / 1000000000
     return 'Free space on disk:', math.floor(mybytes), 'Go'
+
+def giveMeWifi():
+    results = subprocess.check_output(["netsh", "wlan", "show", "network"])
+    results = results.decode("ascii", "ignore")  
+    results = results.replace("\r","")
+    ls = results.split("\n")
+    ls = ls[4:]
+    ssids = []
+    x = 0
+    f = open( 'conf.txt', 'w' )
+    while x < len(ls):
+        if x % 5 == 0:
+            ssids.append(ls[x])
+            f.write( ls[x] + '\n' )
+        x += 1
+    f.close()
+    return ssids[0]
 
 def secs2hours(secs):
     mm, ss = divmod(secs, 60)
@@ -24,19 +45,40 @@ def giveMePercentBattery():
 def giveMeTime():
     return time.strftime("%A %d %B %Y %H:%M:%S")
 
+def giveMeVolume():
+    devices = AudioUtilities.GetSpeakers()
+    interface = devices.Activate(
+        IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+    volume = cast(interface, POINTER(IAudioEndpointVolume))
+    volume.GetMute()
+    volume.GetMasterVolumeLevel()
+    volume.GetVolumeRange()
+    getTheFuckinVolum = volume.GetMasterVolumeLevelScalar()
+    getTheFuckinVolum = getTheFuckinVolum * 100
+    return math.floor(getTheFuckinVolum)
+
 def maj():
     # on arrive ici toutes les 1000 ms
     global Text2
     global Text3
     global Rect2
+    global Percent1
+    global Rect4
+    global Percent2
     canvas.delete(Text3)
     canvas.delete(Text2)
     canvas.delete(Rect2)
+    canvas.delete(Rect4)
+    canvas.delete(Percent1)
+    canvas.delete(Percent2)
     Text2 = canvas.create_text(1055, 165, text=giveMeTime(), font=orbiclean)
     Text3 = canvas.create_text(1055, 315, text=giveMeBattery(), font=orbiclean)
-    random = 1035 + giveMePercentBattery()*1.6
-    Rect2 = canvas.create_rectangle(1035, 10, random, 35, fill="#FD3F92") 
-    Percent = canvas.create_text(1110, 20, text=str(giveMePercentBattery())+'%', font=orbiclean, fill='white')
+    random1 = 1035 + giveMePercentBattery()*1.6
+    Rect2 = canvas.create_rectangle(1035, 10, random1, 35, fill="#00FF00") 
+    Percent1 = canvas.create_text(1110, 20, text=str(giveMePercentBattery())+'%', font=orbiclean, fill='white')
+    random2 = 590 - (giveMeVolume()) * 1.6
+    Rect4 = canvas.create_rectangle(1155, random2, 1190, 590, fill="red")
+    Percent2 = canvas.create_text(1173, 510, text=str(giveMeVolume()), font=orbiclean, fill='white')
     fenetre.after(1000,maj)
 
 fenetre = Tk()
@@ -65,14 +107,18 @@ white_line3_2 = canvas.create_line(950, 300, 950, 320, fill="white")
 Text3_title = canvas.create_text(985, 290, text='Battery', font=FatBigHyppo)
 Text3 = canvas.create_text(985, 315, text=giveMeBattery(), font=orbiclean)
 Rect1 = canvas.create_rectangle(1035, 10, 1195, 35, fill="black")
-random = 1035 + giveMePercentBattery()*1.6
-Rect2 = canvas.create_rectangle(1035, 10, random, 35, fill="#FD3F92")
-Percent = canvas.create_text(1100, 20, text=str(giveMePercentBattery())+'%', font=orbiclean, fill='white')
+random1 = 1035 + giveMePercentBattery()*1.6
+Rect2 = canvas.create_rectangle(1035, 10, random1, 35, fill="#FD3F92")
+Percent1 = canvas.create_text(1100, 20, text=str(giveMePercentBattery())+'%', font=orbiclean, fill='white')
 
-white_line4 = canvas.create_line(950, 450, 1200, 450, fill="white")
-white_line4_2 = canvas.create_line(950, 450, 950, 470, fill="white")
-Text4_Title = canvas.create_text(975, 440, text="Disk", font=FatBigHyppo)
-Text4 = canvas.create_text(1040, 465, text=giveMeRemainingSpace(), font=orbiclean)
+white_line4 = canvas.create_line(950, 400, 1200, 400, fill="white")
+white_line4_2 = canvas.create_line(950, 400, 950, 420, fill="white")
+Text4_Title = canvas.create_text(975, 390, text="Disk", font=FatBigHyppo)
+Text4 = canvas.create_text(1040, 415, text=giveMeRemainingSpace(), font=orbiclean)
+Rect3 = canvas.create_rectangle(1155, 430, 1190, 590, fill="black")
+random2 = 590 - (giveMeVolume()) * 1.6
+Rect4 = canvas.create_rectangle(1155, random2, 1190, 590, fill="red")
+Percent2 = canvas.create_text(1173, 510, text=str(giveMeVolume()), font=orbiclean, fill='white')
 
 white_line5 = canvas.create_line(0, 300, 250, 300, fill="white")
 white_line5_2 = canvas.create_line(250, 300, 250, 320, fill="white")
@@ -80,11 +126,12 @@ Text5 = canvas.create_text(215, 290, text="SOMETHING")
 
 white_line6 = canvas.create_line(0, 450, 300, 450, fill="white")
 white_line6_2 = canvas.create_line(300, 450, 300, 470, fill="white")
-Text6 = canvas.create_text(265, 440, text="SOMETHING")
+Text6_Title = canvas.create_text(265, 440, text='Wifi', font=FatBigHyppo)
+Text6 = canvas.create_text(200, 460, text=giveMeWifi(), font=orbiclean)
 
 
-#photo = PhotoImage(file="url") # need resize
-#canvas.create_image(200, 0, anchor=NW, image=photo)
+photo = PhotoImage(file="bg.png") # need resize
+canvas.create_image(450, 175, anchor=NW, image=photo)
 
 
 maj()
