@@ -11,7 +11,14 @@ from pycaw import AudioUtilities, IAudioEndpointVolume
 from threading import Timer
 import os
 import sys
+import socket
 
+def giveMeIpV4():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(("8.8.8.8", 80))
+    ip = s.getsockname()[0]
+    s.close()
+    return ip
 
 def giveMeIpPing():
     results = subprocess.check_output(["ping", "-n", "1", "localhost"])
@@ -175,6 +182,7 @@ white_line5 = canvas.create_line(0, 300, 250, 300, fill=colorLines)
 white_line5_2 = canvas.create_line(250, 300, 250, 320, fill=colorLines)
 Text5 = canvas.create_text(215, 290, text="PING", font=FatBigHyppo)
 Text5_2 = canvas.create_text(170, 315, text=giveMeIpPing(), font=orbiclean)
+Text5_3 = canvas.create_text(170, 335, text=giveMeIpV4(), font=orbiclean)
 
 white_line6 = canvas.create_line(0, 450, 300, 450, fill=colorLines)
 white_line6_2 = canvas.create_line(300, 450, 300, 470, fill=colorLines)
