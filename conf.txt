@@ -1,22 +1,12 @@
-SSID 1: Ionis Portal
-SSID 2: IONIS361
-SSID 3: Agat_Web
-SSID 4: Yucca
-SSID 5: 
-SSID 6: FCMTM
-SSID 7: SFR_MAISON
+SSID 1: FreeWifi
+SSID 2: FreeWifi_secure
+SSID 3: KENCYPRINCEANGE
+SSID 4: SFR WiFi Mobile
+SSID 5: SFR_3338
+SSID 6: Livebox-A890
+SSID 7: orange
 SSID 8: SFR WiFi FON
-SSID 9: SFR WiFi Mobile
-SSID 10: JeanP
-SSID 11: FREEBOX_CHAHRAZADE_TP
-SSID 12: FreeWifi
-SSID 13: 
-SSID 14: FreeWifi_secure
-SSID 15: Bbox-F1B58D8B
-SSID 16: Sfr-maison
-SSID 17: Bbox-A7B20A27
-SSID 18: Nut-Nut
-SSID 19: Agat_Wifi
-SSID 20: Bbox-6F100621
-SSID 21: orange
+SSID 9: freeboxJenny
+SSID 10: freebox_afo71
+SSID 11: 
 
