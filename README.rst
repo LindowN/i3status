@@ -1,5 +1,6 @@
 ##i3status
 .. image:: python.png
+
 - [ ] IP, Ping avg, % de loss de la route par défaut 
 - [ ] Interface Tkinter (S'inspirer de Conky) 
 - [x] Run-watch (Vérifier si un client DHCP est lancé, un watcher gulp, in seveur web de dev, ...). //windows
