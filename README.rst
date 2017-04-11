@@ -20,5 +20,5 @@
 
 - [ ] BuildBot
 - [ ] Read the Docs
-- [ ] Setup.py
+- [x] Setup.py
 - [x] Licence
