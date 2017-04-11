@@ -1,4 +1,4 @@
-'''from __future__ import print_function
+from __future__ import print_function
 import socket
 
 import psutil
@@ -35,9 +35,10 @@ def main():
 
 
 if __name__ == '__main__':
-    main()'''
+    main()
+'''    
 import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.connect(("8.8.8.8", 80))
 print(s.getsockname()[0])
-s.close()
+s.close()'''

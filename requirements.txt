@@ -5,4 +5,5 @@ numpy
 wmi
 pycaw
 subprocess
+pypiwin32
 //python -m pip -r requirements.txt
