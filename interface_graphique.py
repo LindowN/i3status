@@ -129,7 +129,7 @@ def wampMaj():
     Text8_2 = canvas.create_text(105, 35, text=giveMeWamp(), fill='red',  font=FatBigHyppo)
 
 fenetre = Tk()
-fenetre.title("i3Status")
+fenetre.title("l'Oeil de Xana")
 # helv36 = tkFont.Font(family = "Helvetica",size = 36,weight = "bold") import tkFont
 
 FatBigHyppo = font.Font(family='Orbitron', size=12, weight='bold')
@@ -140,44 +140,44 @@ fenetre.resizable(width=False, height=False)
 canvas = Canvas(fenetre, width=1200, height=600, background="#DBDBDB", cursor="arrow")
 canvas.pack()
 
-colorLines = 
-colorLetters = 
+colorLines = "white"
+colorLetters = "black"
 
-white_line1 = canvas.create_line(0, 150, 200, 150, fill="white")
-white_line1_2 = canvas.create_line(200, 150, 200, 170, fill="white")
+white_line1 = canvas.create_line(0, 150, 200, 150, fill=colorLines)
+white_line1_2 = canvas.create_line(200, 150, 200, 170, fill=colorLines)
 Text1 = canvas.create_text(140, 140, text="Temperature", font=FatBigHyppo)
 Text1_2 = canvas.create_text(155, 165, text=giveMeTemperature(), font=orbiclean)
 
-white_line2 = canvas.create_line(950, 150, 1200, 150, fill="white")
-white_line2_2 = canvas.create_line(950, 150, 950, 170, fill="white")
+white_line2 = canvas.create_line(950, 150, 1200, 150, fill=colorLines)
+white_line2_2 = canvas.create_line(950, 150, 950, 170, fill=colorLines)
 Text2_title = canvas.create_text(1020, 140, text='Date and Time', font=FatBigHyppo)
 Text2 = canvas.create_text(985, 165, text=giveMeTime(), font=orbiclean)
 
-white_line3 = canvas.create_line(950, 300, 1200, 300, fill="white")
-white_line3_2 = canvas.create_line(950, 300, 950, 320, fill="white")
+white_line3 = canvas.create_line(950, 300, 1200, 300, fill=colorLines)
+white_line3_2 = canvas.create_line(950, 300, 950, 320, fill=colorLines)
 Text3_title = canvas.create_text(985, 290, text='Battery', font=FatBigHyppo)
 Text3 = canvas.create_text(985, 315, text=giveMeBattery(), font=orbiclean)
-Rect1 = canvas.create_rectangle(1035, 10, 1195, 35, fill="black")
+Rect1 = canvas.create_rectangle(1035, 10, 1195, 35, fill=colorLetters)
 random1 = 1035 + giveMePercentBattery()*1.6
 Rect2 = canvas.create_rectangle(1035, 10, random1, 35, fill="#FD3F92")
 Percent1 = canvas.create_text(1100, 20, text=str(giveMePercentBattery())+'%', font=orbiclean, fill='white')
 
-white_line4 = canvas.create_line(950, 400, 1200, 400, fill="white")
-white_line4_2 = canvas.create_line(950, 400, 950, 420, fill="white")
+white_line4 = canvas.create_line(950, 400, 1200, 400, fill=colorLines)
+white_line4_2 = canvas.create_line(950, 400, 950, 420, fill=colorLines)
 Text4_Title = canvas.create_text(975, 390, text="Disk", font=FatBigHyppo)
 Text4 = canvas.create_text(1040, 415, text=giveMeRemainingSpace(), font=orbiclean)
-Rect3 = canvas.create_rectangle(1155, 430, 1190, 590, fill="black")
+Rect3 = canvas.create_rectangle(1155, 430, 1190, 590, fill=colorLetters)
 random2 = 590 - (giveMeVolume()) * 1.6
 Rect4 = canvas.create_rectangle(1155, random2, 1190, 590, fill="red")
 Percent2 = canvas.create_text(1173, 510, text=str(giveMeVolume()), font=orbiclean, fill='white')
 
-white_line5 = canvas.create_line(0, 300, 250, 300, fill="white")
-white_line5_2 = canvas.create_line(250, 300, 250, 320, fill="white")
+white_line5 = canvas.create_line(0, 300, 250, 300, fill=colorLines)
+white_line5_2 = canvas.create_line(250, 300, 250, 320, fill=colorLines)
 Text5 = canvas.create_text(215, 290, text="PING", font=FatBigHyppo)
 Text5_2 = canvas.create_text(170, 315, text=giveMeIpPing(), font=orbiclean)
 
-white_line6 = canvas.create_line(0, 450, 300, 450, fill="white")
-white_line6_2 = canvas.create_line(300, 450, 300, 470, fill="white")
+white_line6 = canvas.create_line(0, 450, 300, 450, fill=colorLines)
+white_line6_2 = canvas.create_line(300, 450, 300, 470, fill=colorLines)
 Text6_Title = canvas.create_text(265, 440, text='Wifi', font=FatBigHyppo)
 Text6 = canvas.create_text(200, 460, text=giveMeWifi(), font=orbiclean)
 
