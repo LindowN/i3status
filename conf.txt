@@ -1,36 +1,22 @@
-<<<<<<< HEAD
 SSID 1: Ionis Portal
-SSID 2: Agat_Web
-SSID 3: IONIS
-SSID 4: IONIS361
-SSID 5: Solenne
-SSID 6: iPhone de CheikhOmar
-SSID 7: meltygroup
-SSID 8: U can't see me but I can hear U!
-SSID 9: Freebox-498B0A
-SSID 10: FreeWifi
-SSID 11: No Free Wifi for You
-SSID 12: 
-SSID 13: Bbox-A7B20A27
-SSID 14: MelissaErd
-SSID 15: 
-=======
-SSID 1: Bbox-B8D4FC00
-SSID 2: Ionis Portal
-SSID 3: IONIS361
-SSID 4: Agat_Wifi
-SSID 5: Agat_Web
-SSID 6: 
-SSID 7: MelissaErd
-SSID 8: Livebox-F486
-SSID 9: FreeWifi_secure
-SSID 10: FreeWifi
-SSID 11: freebox_WFQTTF
-SSID 12: Agat_SSol
-SSID 13: Bbox-A7B20A27
-SSID 14: gladysfree
-SSID 15: FBX_CARLSON
-SSID 16: HUAWEI-B82E
+SSID 2: IONIS361
+SSID 3: FreeWifi
+SSID 4: 
+SSID 5: ebliz
+SSID 6: FreeWifi_secure
+SSID 7: SFR_MAISON
+SSID 8: SFR WiFi FON
+SSID 9: SFR WiFi Mobile
+SSID 10: FREEBOX_CHAHRAZADE_TP
+SSID 11: 
+SSID 12: Agat_Wifi
+SSID 13: FBX_CARLSON
+SSID 14: Yucca
+SSID 15: Bbox-AB726431
+SSID 16: Bbox-F1B58D8B
 SSID 17: Freebox-0826A9
->>>>>>> 37b44c4fdd32cfd05cdc1a38f24584bae5a85f8c
+SSID 18: Bbox-6F100621
+SSID 19: WiFi_momo
+SSID 20: Freebox-1E802F
+SSID 21: orange
 

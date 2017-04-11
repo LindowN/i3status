@@ -11,6 +11,6 @@ import os
 import sys
 
 for i in range(10):
-    os.system('ping -c 3 -i .2 localhost')
+    os.system('ping -t localhost')
     print("finishing pinging the localhost - %d" % i)
     sys.stdout.flush()
