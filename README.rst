@@ -1,4 +1,5 @@
-##i3status
+i3status
+=======
 .. image:: python.png
 
 - [ ] IP, Ping avg, % de loss de la route par défaut 
