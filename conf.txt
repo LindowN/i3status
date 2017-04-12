@@ -1,12 +1,14 @@
-SSID 1: FreeWifi
+SSID 1: FREEBOX_FRANCK_XI
 SSID 2: FreeWifi_secure
-SSID 3: KENCYPRINCEANGE
-SSID 4: SFR WiFi Mobile
-SSID 5: SFR_3338
-SSID 6: Livebox-A890
-SSID 7: orange
-SSID 8: SFR WiFi FON
-SSID 9: freeboxJenny
-SSID 10: freebox_afo71
-SSID 11: 
+SSID 3: Bbox-A94E1C
+SSID 4: FreeWifi
+SSID 5: PS4-0A3D1AF3CC17
+SSID 6: Livebox-6578
+SSID 7: 
+SSID 8: AndroidAP
+SSID 9: hamdani
+SSID 10: Livebox-18d8
+SSID 11: Bouygues Telecom Wi-Fi
+SSID 12: Bbox-5DFEBF
+SSID 13: MIRONETTE
 

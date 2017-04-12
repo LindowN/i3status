@@ -13,6 +13,16 @@ import os
 import sys
 import socket
 
+
+def giveMeLoadAverage():
+    p = psutil.Process()
+    p_cpu_times = p.cpu_times()
+    stat = p_cpu_times
+    cpu_percent = p.cpu_percent(1)
+    percent = cpu_percent, "%"
+    return stat, percent
+
+
 def giveMeIpV4():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.connect(("8.8.8.8", 80))
@@ -109,6 +119,7 @@ def maj():
     global Rect4
     global Percent2
     global Text5_2
+    global Text4_3
     canvas.delete(Text3)
     canvas.delete(Text2)
     canvas.delete(Rect2)
@@ -116,6 +127,7 @@ def maj():
     canvas.delete(Percent1)
     canvas.delete(Percent2)
     canvas.delete(Text5_2)
+    canvas.delete(Text4_3)
     Text2 = canvas.create_text(1055, 165, text=giveMeTime(), font=orbiclean,fill = font_white)
     Text3 = canvas.create_text(1055, 315, text=giveMeBattery(), font=orbiclean, fill = font_white)
     random1 = 1035 + giveMePercentBattery()*1.6
@@ -125,6 +137,7 @@ def maj():
     Rect4 = canvas.create_rectangle(1155, random2, 1190, 590, fill="red")
     Percent2 = canvas.create_text(1173, 510, text=str(giveMeVolume()), font=orbiclean, fill='white')
     Text5_2 = canvas.create_text(170, 315, text=giveMeIpPing(), font=orbiclean, fill = font_white)
+    Text4_3 = canvas.create_text(1040, 455, text=giveMeLoadAverage(), font=orbiclean, fill = font_white)
     fenetre.after(1000,maj)
 
 def wampMaj():
@@ -175,6 +188,9 @@ white_line4 = canvas.create_line(950, 400, 1200, 400, fill=colorLines)
 white_line4_2 = canvas.create_line(950, 400, 950, 420, fill=colorLines)
 Text4_Title = canvas.create_text(975, 390, text="Disk", font=FatBigHyppo, fill = font_white)
 Text4 = canvas.create_text(1040, 415, text=giveMeRemainingSpace(), font=orbiclean,fill = font_white)
+Text4_2 = canvas.create_text(1000, 435, text="{use of the cpu => }", font=orbiclean, fill = font_white)
+Text4_3 = canvas.create_text(1040, 455, text=giveMeLoadAverage(), font=orbiclean, fill = font_white)
+
 Rect3 = canvas.create_rectangle(1155, 430, 1190, 590, fill=colorLetters)
 random2 = 590 - (giveMeVolume()) * 1.6
 Rect4 = canvas.create_rectangle(1155, random2, 1190, 590, fill="red")
