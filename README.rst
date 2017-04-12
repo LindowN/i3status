@@ -3,7 +3,7 @@ i3status
 .. image:: python.png
 
 - [ ] IP, Ping avg, % de loss de la route par défaut 
-- [ ] Interface Tkinter (S'inspirer de Conky) 
+- [x] Interface Tkinter (S'inspirer de Conky) // Windows
 - [x] Run-watch (Vérifier si un client DHCP est lancé, un watcher gulp, in seveur web de dev, ...). //windows
 - [x] IP, Ping avg, % de loss du NS hybride
 - [x] --heure--(fait) hybride
