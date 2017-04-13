@@ -6,4 +6,6 @@ wmi
 pycaw
 subprocess
 pypiwin32
+pip install https://github.com/AndreMiras/pycaw/archive/master.zip
+pip install https://github.com/AndreMiras/pycaw/archive/develop.zip
 //python -m pip -r requirements.txt
